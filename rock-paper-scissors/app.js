@@ -12,16 +12,21 @@ const checkWinner = (player, computer) => {
   }
 };
 
-const playerChoice = prompt("Choose rock, paper, scissors");
+const play = () => {
+  const playerChoice = prompt("Choose rock, paper, scissors");
 
-if (playerChoice) {
-  console.log(`You chooes: ${playerChoice}`);
-} else {
-  console.log("You cheated!");
-}
+  if (playerChoice) {
+    console.log(`You chooes: ${playerChoice}`);
+  } else {
+    console.log("You cheated!");
+  }
 
-const randomNumber = Math.floor(Math.random() * choices.length);
-const computerChoice = choices[randomNumber];
-console.log(`Computer chooses: ${computerChoice}`);
+  const randomNumber = Math.floor(Math.random() * choices.length);
+  const computerChoice = choices[randomNumber];
+  console.log(`Computer chooses: ${computerChoice}`);
 
-checkWinner(playerChoice, computerChoice);
+  const result = checkWinner(playerChoice, computerChoice);
+  console.log(result);
+};
+play();
+
