@@ -2,24 +2,24 @@ const choices = ["rock", "paper", "scissors"];
 
 const checkWinner = (player, computer) => {
   if (player === computer) {
-    console.log("It's a tie.");
+    return "It's a tie.";
   } else if (player === "rock") {
     if (computer === "scissors") {
-      console.log("You win.");
+      return "Player win.";
     } else {
-      console.log("You lose!");
+      return "computer win!";
     }
   } else if (player === "paper") {
     if (computer === "rock") {
-      console.log("You win.");
+      return "Player win.";
     } else {
-      console.log("You lose!");
+      return "computer win!";
     }
   } else {
     if (computer === "paper") {
-      console.log("You win.");
+      return "Player win.";
     } else {
-      console.log("You lose");
+      return "computer win!";
     }
   }
 };
