@@ -1,5 +1,29 @@
 const choices = ["rock", "paper", "scissors"];
 
+const checkWinner = (player, computer) => {
+  if (player === computer) {
+    console.log("It's a tie.");
+  } else if (player === "rock") {
+    if (computer === "scissors") {
+      console.log("You win.");
+    } else {
+      console.log("You lose!");
+    }
+  } else if (player === "paper") {
+    if (computer === "rock") {
+      console.log("You win.");
+    } else {
+      console.log("You lose!");
+    }
+  } else {
+    if (computer === "paper") {
+      console.log("You win.");
+    } else {
+      console.log("You lose");
+    }
+  }
+};
+
 const playerChoice = prompt("Choose rock, paper, scissors");
 
 if (playerChoice) {
@@ -12,24 +36,4 @@ const randomNumber = Math.floor(Math.random() * choices.length);
 const computerChoice = choices[randomNumber];
 console.log(`Computer chooses: ${computerChoice}`);
 
-if (playerChoice === computerChoice) {
-  console.log("It's a tie.");
-} else if (playerChoice === "rock") {
-  if (computerChoice === "scissors") {
-    console.log("You win.");
-  } else {
-    console.log("You lose!");
-  }
-} else if (playerChoice === "paper") {
-  if (computerChoice === "rock") {
-    console.log("You win.");
-  } else {
-    console.log("You lose!");
-  }
-} else {
-  if (computerChoice === "paper") {
-    console.log("You win.");
-  } else {
-    console.log("You lose");
-  }
-}
+checkWinner(playerChoice, computerChoice);
