@@ -15,10 +15,11 @@ const checkWinner = (player, computer) => {
 const play = () => {
   const playerChoice = prompt("Choose rock, paper, scissors");
 
-  if (playerChoice) {
+  if (choices.indexOf(playerChoice) !== -1) {
     console.log(`You chooes: ${playerChoice}`);
   } else {
     console.log("You cheated!");
+    return;
   }
 
   const randomNumber = Math.floor(Math.random() * choices.length);
