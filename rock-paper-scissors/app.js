@@ -4,23 +4,11 @@ const checkWinner = (player, computer) => {
   if (player === computer) {
     return "It's a tie.";
   } else if (player === "rock") {
-    if (computer === "scissors") {
-      return "Player win.";
-    } else {
-      return "computer win!";
-    }
+    return computer === "scissors" ? "Player win" : "computer win";
   } else if (player === "paper") {
-    if (computer === "rock") {
-      return "Player win.";
-    } else {
-      return "computer win!";
-    }
+    return computer === "rock" ? "Player win" : "computer win";
   } else {
-    if (computer === "paper") {
-      return "Player win.";
-    } else {
-      return "computer win!";
-    }
+    return computer === "paper" ? "Player win" : "computer win";
   }
 };
 
