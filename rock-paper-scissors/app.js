@@ -1,4 +1,6 @@
 const choices = ["rock", "paper", "scissors"];
+let playerScore = 0;
+let computerScore = 0;
 
 const checkWinner = (player, computer) => {
   if (player === computer) {
@@ -15,11 +17,16 @@ const checkWinner = (player, computer) => {
 const showResult = (result) => {
   if (result === "player") {
     console.log("You win.");
+    playerScore++;
   } else if (result === "computer") {
     console.log("You lose!");
+    computerScore++;
   } else {
     console.log("It's a tie.");
   }
+  console.log(`Your score: ${playerScore}`);
+  console.log(`computer score: ${computerScore}`);
+  console.log("____________________________________");
 };
 
 const play = () => {
@@ -38,5 +45,6 @@ const play = () => {
 
   const res = checkWinner(playerChoice, computerChoice);
   showResult(res);
+  play();
 };
 play();
