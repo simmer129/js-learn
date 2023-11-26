@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Todo App</h2>
+      <div class="input-section">
+        <input type="text" placeholder="Add todo ..." id="task-input" />
+        <input type="date" id="date-input" />
+        <button>Add</button>
+      </div>
+
+      <div class="todos-oprator">
+        <button class="filter-todos">All</button>
+        <button class="filter-todos">Pending</button>
+        <button class="filter-todos">Completed</button>
+      </div>
+      <button>Delete All</button>
+    </div>
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>text</td>
+            <td>date</td>
+            <td>pending</td>
+            <td>
+              <button>Edit</button>
+              <button>Do</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <p style="text-align: center; color: tomato">
+        &copy; 2023 Esmaeil Mohammadzade
+      </p>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
